@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Shop</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/Sneaker-shop.jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Sneaker Shop</h1>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarInicio()" class="Start">Inicio</a></li>
+                <li><a href="#" onclick="mostrarProductos()"" class="Menu">Ver menú</a></li>
+                <li><a href="#" onclick="mostrarGestion()" class="Gest">Gestionar menú</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div id="inicio-container">
+            <img src="img/Sneaker-shop.jpg" class="logo" alt="">
+            <h2>¡Pisa con Estilo: Donde Cada Zapatilla Cuenta una Historia!</h2>
+        </div>
+        <div id="gestionar-container" style="display:none;">
+            <h2>Gestionar menú</h2>
+            <button id="btn-agregar" onclick="agregar()">Agregar tenis</button>
+            <div id="form-container" style="display:none;">
+                <input type="text" id="marca" placeholder="Marca">
+                <input type="text" id="descripcion" placeholder="Descripción">
+                <input type="number" id="precio" placeholder="Precio">
+                <button onclick="guardarTenis()">Guardar</button>
+                <button onclick="cancelar()">Cancelar</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-tenis">
+                    <!-- Los tenis agregados aparecerán aquí -->
+                </tbody>
+            </table>
+        </div>
+        <div id="productos-container" style="display:none;">
+            <h2>Ver elementos</h2>
+            <!-- Los productos agregados en Gestionar.html aparecerán aquí -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Derechos reservados 2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
